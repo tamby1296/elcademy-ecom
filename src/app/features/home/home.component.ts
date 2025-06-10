@@ -40,7 +40,10 @@ export class HomeComponent implements OnInit {
   }
 
   updateProduct() {
-    console.log("tet");
-    this.p.title = "New name";
+    this.p = {
+      ...this.p,
+      title: "New product name",
+      price: 50,
+    };
   }
 }

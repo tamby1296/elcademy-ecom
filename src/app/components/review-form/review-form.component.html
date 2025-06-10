@@ -11,6 +11,7 @@
       rows="10"
       placeholder="Write your review...."
       [(ngModel)]="reviewContent"
+      #reviewCtrl="ngModel"
       required
     ></textarea>
   </fieldset>
@@ -18,7 +19,8 @@
   <div class="mt-7 flex justify-end">
     <button
       type="submit"
-      class="outline outline-1 outline-kAppBlack p-4 py-2 min-w-max"
+      class="outline outline-1 outline-kAppBlack p-4 py-2 min-w-max disabled:opacity-50 disabled:cursor-not-allowed"
+      [disabled]="reviewForm.invalid"
     >
       Submit
     </button>
