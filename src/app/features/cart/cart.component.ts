@@ -14,9 +14,10 @@ import { HeaderComponent } from "../../components/header/header.component";
 export class CartComponent {
   products: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
-  removeProduct(id: string) {
+  onProductRemoved(id: string) {
+    console.log("Cart onProductRemoved", id);
     this.products = (this.products as []).filter((p) => p["id"] !== id);
   }
 

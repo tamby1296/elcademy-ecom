@@ -1,5 +1,11 @@
 import { CommonModule } from "@angular/common";
-import { Component, Input, OnDestroy } from "@angular/core";
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  Output,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
@@ -19,7 +25,7 @@ export class CartItemComponent implements OnDestroy {
   @Input() quantity!: number;
   @Input() productImage!: string;
   @Input() className!: string;
-  @Input() onRemove!: (id: string) => void;
+  @Output() productRemoved = new EventEmitter<string>();
 
   constructor() {}
 
@@ -28,10 +34,10 @@ export class CartItemComponent implements OnDestroy {
   }
 
   handleRemove() {
-    if (this.onRemove) this.onRemove(this.id);
+    this.productRemoved.emit(this.id);
   }
 
   ngOnDestroy() {
-    console.log(`Remove item ${this.id}`);
+    console.log("CartItem ngOnDestroy", this.id);
   }
 }

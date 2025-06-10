@@ -10,8 +10,8 @@
         [price]="product.price"
         [quantity]="product.quantity"
         [productImage]="product.image"
-        [onRemove]="removeProduct.bind(this)"
         [className]="'border-b border-kAppBlack border-opacity-10 last:border-0'"
+        (productRemoved)="onProductRemoved($event)"
         ></app-cart-item>
       </ng-container>
   </div>
