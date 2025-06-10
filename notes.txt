@@ -1,0 +1,30 @@
+to demonstrate ngSwitch directive:
+- Create a new attribute for products, adding product type
+
+<div [ngSwitch]="product.type">
+    <!-- Book Template -->
+    <div *ngSwitchCase="'book'">
+      <h3>📘 {{ product.name }}</h3>
+      <p>Author: {{ product.author }}</p>
+    </div>
+
+    <!-- Electronics Template -->
+    <div *ngSwitchCase="'electronics'">
+      <h3>🔌 {{ product.name }}</h3>
+      <p>Brand: {{ product.brand }}</p>
+    </div>
+
+    <!-- Furniture Template -->
+    <div *ngSwitchCase="'furniture'">
+      <h3>🪑 {{ product.name }}</h3>
+      <p>Material: {{ product.material }}</p>
+    </div>
+
+    <!-- Default Template -->
+    <div *ngSwitchDefault>
+      <h3>🛒 {{ product.name }}</h3>
+      <p>Type: {{ product.type }}</p>
+    </div>
+
+
+use review component to showcase form directives

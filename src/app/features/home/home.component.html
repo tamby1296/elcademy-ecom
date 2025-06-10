@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="flex flex-wrap justify-center items-start gap-4 p-10">
+{{isLoading}}
+<div class="flex flex-wrap items-start gap-4 md:w-9/12 mx-auto">
   <ng-container *ngFor="let product of products">
     <app-product 
     [title]="product.title" 
@@ -7,7 +8,7 @@
     [price]="product.price"
     [rating]="product.rating"
     [discount]="product.discount"
-    [className]="'mx-0 w-2/12'"
+    [className]="'w-[calc(50%-8px)] mx-0 md:w-[calc(33.33%-10.7px)]'"
     ></app-product>
   </ng-container>
 </div>

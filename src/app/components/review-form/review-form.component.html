@@ -1,0 +1,25 @@
+<form (ngSubmit)="handleFormSubmit()" #reviewForm="ngForm">
+  <fieldset class="flex flex-col gap-5 items-start">
+    <label class="text-right mt-1" for="review">
+      Review
+    </label>
+    <textarea
+      class="w-full px-2 outline outline-1"
+      id="review"
+      name="reviewContent"
+      rows="5"
+      placeholder="Review...."
+      [(ngModel)]="reviewContent"
+      required
+    ></textarea>
+  </fieldset>
+
+  <div class="mt-7 flex justify-end">
+    <button
+      type="submit"
+      class="outline outline-1 outline-kAppBlack p-4 py-2 min-w-max"
+    >
+      Submit
+    </button>
+  </div>
+</form>

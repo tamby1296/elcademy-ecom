@@ -13,13 +13,23 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
   products: any;
+  isLoading = true;
+  error: string | null = null;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('/assets/data/shop.json').subscribe(( data => {
-      this.products = data
-    }));
+    this.http.get('/assets/data/shop.json').subscribe({
+      next: (data) => {
+        this.products = data;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        this.error = 'Failed to load products.';
+        console.error('Error loading products:', err);
+        this.isLoading = false;
+      }
+    });
   }
 
 }
