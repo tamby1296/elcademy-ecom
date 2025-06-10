@@ -1,0 +1,29 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "image": "/assets/images/products/top_2.png",
+    "name": "Gradient Graphic T-shirt",
+    "size": "Large",
+    "color": "White",
+    "price": 73,
+    "quantity": 2
+  },
+  {
+    "id": "6a1f3c2b-8f4d-42e8-a19b-9e0bfb7e3c0a",
+    "image": "/assets/images/products/top_3.png",
+    "name": "Checkered Shirt",
+    "size": "Medium",
+    "color": "Red",
+    "price": 90,
+    "quantity": 1
+  },
+  {
+    "id": "79cb06b4-66a6-4899-9ee4-99b948c6fd8a",
+    "image": "/assets/images/products/top_4.png",
+    "name": "Skinny Fit Jeans",
+    "size": "Large",
+    "color": "Blue",
+    "price": 140,
+    "quantity": 3
+  }
+]

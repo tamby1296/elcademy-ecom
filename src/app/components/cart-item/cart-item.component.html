@@ -1,0 +1,33 @@
+<div class="flex gap-3 py-4 className">
+  <img
+    [src]="productImage"
+    alt="cart-prod-1"
+    class="w-[100px] aspect-square rounded-lg"
+  />
+  <div class="relative flex-auto">
+    <button class="absolute top-0 right-0" (click)="removeFromCart()">
+      <img src="/assets/icons/remove.svg" />
+    </button>
+    
+    <a [routerLink]="'/product'" class="hover:underline">
+      <h3 class="font-bold pr-5">{{ name }}</h3>
+    </a>
+    <p class="text-xs">
+      Size:&nbsp;<span class="text-kAppGrey opacity-60">{{ size }}</span>
+    </p>
+    <p class="text-xs">
+      Color:&nbsp;<span class="text-kAppGrey opacity-60">{{ color }}</span>
+    </p>
+    <div class="flex items-center justify-between mt-2">
+      <h3 class="text-xl font-bold">${{ total }}</h3>
+      <div class="py-2 px-3">
+        <input 
+          type="number" 
+          [(ngModel)]="quantity" 
+          [min]="1"
+          class="w-12"
+        />
+      </div>
+    </div>
+  </div>
+</div>
