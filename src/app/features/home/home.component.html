@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="h-full max-w-[1440px] mx-auto">
+<div class="h-full max-w-[1440px] mx-auto pt-10">
   <div *ngIf="isLoading">Loading...</div>
   
   <div *ngIf="error">{{ error }}</div>
@@ -13,7 +13,6 @@
       [rating]="product.rating"
       [discount]="product.discount"
       ></app-product>
-      <!-- [className]="product.discount > 10 ? 'bg-slate-600' : ''" -->
     </ng-container>
     <app-product 
       [title]="p.title" 
