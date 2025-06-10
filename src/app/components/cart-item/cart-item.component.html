@@ -5,8 +5,8 @@
     class="w-[100px] aspect-square rounded-lg"
   />
   <div class="relative flex-auto">
-    <button class="absolute top-0 right-0" (click)="removeFromCart()">
-      <img src="/assets/icons/remove.svg" />
+    <button class="absolute top-0 right-0" (click)="handleRemove()">
+      <img src="/assets/icons/bin.svg" alt="remove-item" class="w-5 h-5"/>
     </button>
     
     <a [routerLink]="'/product'" class="hover:underline">

@@ -1,3 +1,8 @@
+demostrate ngOnChanges - implement favourite product
+demonstrate ngOnDoCheck - update functionality on a product 
+demostrate ngOnAfterContentInit - update review form to add some description to form
+demonstrate ngOnDestroy - cart item remove item
+
 to demonstrate ngSwitch directive:
 - Create a new attribute for products, adding product type
 
