@@ -1,14 +1,16 @@
 <app-header></app-header>
-<div class="w-1/2 mx-auto">
-    <ng-container *ngFor="let product of products">
-      <app-cart-item
-      [name]="product.name"
-      [size]="product.size"
-      [color]="product.color"
-      [price]="product.price"
-      [quantity]="product.quantity"
-      [productImage]="product.image"
-      [className]="'border-b border-kAppBlack border-opacity-10 last:border-0'"
-      ></app-cart-item>
-    </ng-container>
+<div class="h-full max-w-[1440px] mx-auto">
+  <div class="w-3/4 mx-auto">
+      <ng-container *ngFor="let product of products">
+        <app-cart-item
+        [name]="product.name"
+        [size]="product.size"
+        [color]="product.color"
+        [price]="product.price"
+        [quantity]="product.quantity"
+        [productImage]="product.image"
+        [className]="'border-b border-kAppBlack border-opacity-10 last:border-0'"
+        ></app-cart-item>
+      </ng-container>
+  </div>
 </div>

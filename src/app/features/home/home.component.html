@@ -1,14 +1,19 @@
 <app-header></app-header>
-{{isLoading}}
-<div class="flex flex-wrap items-start gap-4 md:w-9/12 mx-auto">
-  <ng-container *ngFor="let product of products">
-    <app-product 
-    [title]="product.title" 
-    [image]="product.image" 
-    [price]="product.price"
-    [rating]="product.rating"
-    [discount]="product.discount"
-    [className]="'w-[calc(50%-8px)] mx-0 md:w-[calc(33.33%-10.7px)]'"
-    ></app-product>
-  </ng-container>
+<div class="h-full max-w-[1440px] mx-auto">
+  <div *ngIf="isLoading">Loading...</div>
+  
+  <div *ngIf="error">{{ error }}</div>
+  
+  <div *ngIf="products && !isLoading" class="flex flex-wrap items-start gap-4 mx-auto">
+    <ng-container *ngFor="let product of products">
+      <app-product 
+      [title]="product.title" 
+      [image]="product.image" 
+      [price]="product.price"
+      [rating]="product.rating"
+      [discount]="product.discount"
+      [className]="'w-[calc(50%-8px)] mx-0 md:w-[calc(33.33%-10.7px)]'"
+      ></app-product>
+    </ng-container>
+  </div>
 </div>
