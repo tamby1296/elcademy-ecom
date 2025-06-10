@@ -1,4 +1,4 @@
-<div class="block mx-2 className">
+<div [ngClass]="['block mx-2', className]">
   <div class="relative rounded-base bg-kAppLightGrey overflow-hidden mb-2 aspect-square h-[250px]">
     <img [src]="image" alt="product-1" class="w-full h-full object-cover pointer-events-none" />
     <button class="absolute bottom-1 left-1 bg-black px-2 rounded" (click)="toggleIsFavourite()">Favourite</button>
