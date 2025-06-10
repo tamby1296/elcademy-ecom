@@ -13,6 +13,13 @@ import { CommonModule } from "@angular/common";
 })
 export class HomeComponent implements OnInit {
   products: any;
+  p = {
+    image: "/assets/images/products/top_1.png",
+    title: "Vertical Striped Shirt",
+    rating: 3,
+    price: 232,
+    discount: 20,
+  };
   isLoading = true;
   error: string | null = null;
 
@@ -30,5 +37,10 @@ export class HomeComponent implements OnInit {
         this.isLoading = false;
       },
     });
+  }
+
+  updateProduct() {
+    console.log("tet");
+    this.p.title = "New name";
   }
 }

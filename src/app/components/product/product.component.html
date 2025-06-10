@@ -1,20 +1,13 @@
-<a [routerLink]="'/cart'" class="block mx-2 className">
-  <div class="rounded-base bg-kAppLightGrey overflow-hidden mb-2 aspect-square h-[250px]">
-    <img
-      [src]="image"
-      alt="product-1"
-      class="w-full h-full object-cover pointer-events-none"
-    />
+<div class="block mx-2 className">
+  <div class="relative rounded-base bg-kAppLightGrey overflow-hidden mb-2 aspect-square h-[250px]">
+    <img [src]="image" alt="product-1" class="w-full h-full object-cover pointer-events-none" />
+    <button class="absolute bottom-1 left-1 bg-black px-2 rounded" (click)="toggleIsFavourite()">Favourite</button>
   </div>
-  <div>
+  <a [routerLink]="'/cart'">
     <p class="font-bold mb-1">{{ title }}</p>
     <div class="mb-1 flex items-baseline gap-1">
       <ng-container *ngFor="let _ of createArray(rating)">
-        <img
-          src="/assets/icons/rating_star.svg"
-          alt="rating"
-          class="inline-block w-4 h-4"
-        />
+        <img src="/assets/icons/rating_star.svg" alt="rating" class="inline-block w-4 h-4" />
       </ng-container>
       <span class="inline-block ml-1 text-xs md:text-sm">
         {{ rating }}/5
@@ -26,12 +19,10 @@
         <span class="ml-2 text-kAppGrey opacity-40 line-through">
           ${{ price }}
         </span>
-        <span
-          class="ml-2 inline-block px-2 py-1 text-kAppRed text-xs bg-kAppRed bg-opacity-10 rounded-[62px]"
-        >
-          {{ discount }}%
+        <span class="ml-2 inline-block px-2 py-1 text-kAppRed text-xs bg-kAppRed bg-opacity-10 rounded-[62px]">
+          {{ finalDiscount }}%
         </span>
       </ng-container>
     </p>
-  </div>
-</a>
+  </a>
+</div>

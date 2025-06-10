@@ -1,5 +1,5 @@
-demostrate ngOnChanges - implement favourite product
-demonstrate ngOnDoCheck - update functionality on a product 
+demostrate ngOnDoCheck - implement favourite product
+demonstrate ngOnChanges- update functionality on a product
 demostrate ngOnAfterContentInit - update review form to add some description to form
 demonstrate ngOnDestroy - cart item remove item
 

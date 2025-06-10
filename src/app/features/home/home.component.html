@@ -15,5 +15,14 @@
       [className]="'w-[calc(50%-8px)] mx-0 md:w-[calc(33.33%-10.7px)]'"
       ></app-product>
     </ng-container>
-  </div>
+    <app-product 
+      [title]="p.title" 
+      [image]="p.image" 
+      [price]="p.price"
+      [rating]="p.rating"
+      [discount]="p.discount"
+      [className]="'w-[calc(50%-8px)] mx-0 md:w-[calc(33.33%-10.7px)]'"
+      ></app-product>
+    </div>
+    <button class="rounded bg-black p-2 my-5" (click)="updateProduct()">Update product</button>
 </div>

@@ -1,4 +1,5 @@
-<form (ngSubmit)="handleFormSubmit()" #reviewForm="ngForm">
+<form (ngSubmit)="handleFormSubmit()" #reviewForm="ngForm" #wrapper>
+  <ng-content></ng-content>
   <fieldset class="flex flex-col gap-5 items-start">
     <label class="text-right mt-1" for="review">
       Review
@@ -7,8 +8,8 @@
       class="w-full px-2 outline outline-1"
       id="review"
       name="reviewContent"
-      rows="5"
-      placeholder="Review...."
+      rows="10"
+      placeholder="Write your review...."
       [(ngModel)]="reviewContent"
       required
     ></textarea>

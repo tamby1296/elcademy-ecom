@@ -1,6 +1,11 @@
 <app-header></app-header>
 <div class="h-full max-w-[1440px] mx-auto">
   <div class="w-full flex items-start py-10 px-6">
-    <app-review-form class="w-1/2 mx-auto"></app-review-form>
+    <app-review-form class="w-1/2 mx-auto">
+      <div #formHeader>
+        <h2 class="font-bold text-2xl mb-6">Review Form</h2>
+        <p class="mb-6 italic">This is a description that comes from the parent component</p>
+      </div>
+    </app-review-form>
   </div>
 </div>
